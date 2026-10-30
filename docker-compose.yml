@@ -18,6 +18,8 @@ services:
   db:
     # TODO(step-5d): use postgres:16-alpine and define a healthcheck using pg_isready.
     image: postgres:16-alpine
+    ports:
+      - "5432:5432"
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postgres", "-d", "workshop"]
       interval: 5s
