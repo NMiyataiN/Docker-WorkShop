@@ -30,7 +30,7 @@ jobs:
         with:
             scan-type: image
             image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
-            severity: CRITICAL
+            severity: HIGH CRITICAL
             exit-code: '1'
             ignore-unfixed: true
 
